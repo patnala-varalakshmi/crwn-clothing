@@ -2,6 +2,8 @@ import { useState } from "react";
 import FormInput from "../../form-input/form-input.component"
 import Button from "../../button/button.component"
 
+import "./sign-up-form.styles.scss"
+
 const defaulFormFields = {
   displayName: "",
   email: "",
@@ -12,8 +14,6 @@ const defaulFormFields = {
 function SignUpForm() {
   const [formFields, setFormFields] = useState(defaulFormFields);
   const { displayName, email, password, confirmPassword } = formFields;
-
-  console.log(formFields);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
